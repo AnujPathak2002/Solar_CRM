@@ -38,6 +38,7 @@ export default function Layout() {
     if (location.pathname.includes('manage-tasks/list')) return 'Manage Existing Tasks';
     if (location.pathname.includes('manage-tasks/create')) return 'Add/Edit Task Request';
     if (location.pathname.includes('manage-tasks/assign')) return 'Assign Tasks via Excel';
+    if (location.pathname.includes('manage-tasks/questionnaire')) return 'Questionnaire Builder';
     return 'Solar CRM';
   };
 

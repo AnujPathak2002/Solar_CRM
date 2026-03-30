@@ -10,6 +10,7 @@ import Layout from './components/layout/Layout';
 import TaskList from './pages/admin/TaskList';
 import TaskForm from './pages/admin/TaskForm';
 import TaskUpload from './pages/admin/TaskUpload';
+import QuestionnaireBuilder from './pages/admin/QuestionnaireBuilder';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="manage-tasks/list" element={<TaskList />} />
           <Route path="manage-tasks/create" element={<TaskForm />} />
           <Route path="manage-tasks/assign" element={<TaskUpload />} />
+          <Route path="manage-tasks/questionnaire/:taskId" element={<QuestionnaireBuilder />} />
         </Route>
         
         {/* Fallback */}
