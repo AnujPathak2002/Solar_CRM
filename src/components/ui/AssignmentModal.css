@@ -1,0 +1,113 @@
+.assignment-modal {
+  background: #fff;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.assignment-header {
+  background: #2c3e50; /* Exact dark blue/gray from screenshot */
+  color: #fff;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assignment-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.assignment-close {
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.assignment-close:hover {
+  opacity: 0.8;
+}
+
+.assignment-body {
+  padding: 2.5rem 1.5rem;
+}
+
+.no-task-text {
+  color: #008000; /* Darker strong green from screenshot */
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.has-task-state .no-task-text {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.task-details-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 0.8rem;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.detail-label {
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.detail-value {
+  color: var(--color-text-main);
+  text-align: right;
+  max-width: 60%;
+}
+
+.assignment-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-blue {
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-blue:hover {
+  background: #0b5ed7;
+}
