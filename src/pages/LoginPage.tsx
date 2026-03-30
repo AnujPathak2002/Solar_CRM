@@ -30,7 +30,7 @@ export default function LoginPage() {
     e.preventDefault();
     const role = validateCredentials(username, password);
     if (!role) {
-      setError('Invalid Invalid username or password. Valid options: Supervisor, executive1...10 with password "ok".');
+      setError('Invalid Invalid username or password.');
       return;
     }
     setStep(2);
@@ -100,7 +100,7 @@ export default function LoginPage() {
                 className="input-field"
                 value={username}
                 onChange={(e) => { setUsername(e.target.value); setError(''); }}
-                placeholder="e.g. Supervisor or executive1"
+                placeholder="Enter Username"
                 required
                 autoFocus
               />
