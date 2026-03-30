@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom';
-import { Plus, Search, Edit, Trash2, Calendar } from 'lucide-react';
+import { Plus, Search, Edit, Trash2, Calendar, ClipboardList } from 'lucide-react';
 import './ManageTasks.css';
 
 const MOCK_TASKS = [
-  { id: 'TSK-1001', title: 'National Solar Drive - Q3', module: 'Outreach', assignedTo: 'executive1', status: 'Active', due: '2026-06-15' },
-  { id: 'TSK-1002', title: 'Follow-up Call Backs', module: 'Sales', assignedTo: 'executive2', status: 'Pending', due: '2026-07-10' },
-  { id: 'TSK-1003', title: 'Junk Lead Verification', module: 'Audit', assignedTo: 'executive4', status: 'Completed', due: '2026-05-20' },
+  { id: 'TSK-1001', title: 'National Solar Drive - Q3', module: 'Outreach', assignedTo: 'executive1', status: 'Active', due: '2026-06-15', questionnaireRequired: true },
+  { id: 'TSK-1002', title: 'Follow-up Call Backs', module: 'Sales', assignedTo: 'executive2', status: 'Pending', due: '2026-07-10', questionnaireRequired: false },
+  { id: 'TSK-1003', title: 'Junk Lead Verification', module: 'Audit', assignedTo: 'executive4', status: 'Completed', due: '2026-05-20', questionnaireRequired: true },
 ];
 
 export default function TaskList() {
@@ -52,6 +52,15 @@ export default function TaskList() {
                   </td>
                   <td>
                     <div className="action-buttons">
+                      {task.questionnaireRequired && (
+                        <button
+                          className="btn-add-questionnaire"
+                          title="Add Questionnaire"
+                          onClick={() => navigate(`/app/manage-tasks/questionnaire/${task.id}`)}
+                        >
+                          <ClipboardList size={14} /> Add Questionnaire
+                        </button>
+                      )}
                       <button className="icon-btn text-secondary" title="Edit Task" onClick={() => navigate('/app/manage-tasks/create')}>
                         <Edit size={16} />
                       </button>
